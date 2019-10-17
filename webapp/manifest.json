@@ -5,6 +5,12 @@
 		"type": "application",
 		"applicationVersion": {
 			"version": "1.0.0"
+		},
+		"dataSources": {
+			"products_data": {
+				"uri": "products.json",
+				"type": "JSON"
+			}
 		}
 	},
 	"sap.ui5": {
@@ -13,6 +19,12 @@
 			"type": "XML",
 			"async": true,
 			"id": "fcl"
+		},
+		"models": {
+			"products": {
+				"type": "sap.ui.model.json.JSONModel",
+				"dataSource": "products_data"
+			}
 		},
 		"dependencies": {
 			"minUI5Version": "1.60.0",

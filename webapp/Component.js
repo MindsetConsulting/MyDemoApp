@@ -14,18 +14,12 @@ sap.ui.define([
 
 		init: function () {
 			var oModel,
-				oProductsModel,
 				oRouter;
 
 			UIComponent.prototype.init.apply(this, arguments);
 
 			oModel = new JSONModel();
 			this.setModel(oModel);
-
-			// set products demo model on this sample
-			oProductsModel = new JSONModel( 'products.json');
-			oProductsModel.setSizeLimit(1000);
-			this.setModel(oProductsModel, 'products');
 
 			oRouter = this.getRouter();
 			oRouter.attachBeforeRouteMatched(this._onBeforeRouteMatched, this);
